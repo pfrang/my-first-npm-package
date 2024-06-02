@@ -1,0 +1,1 @@
+export { printInput } from './functions'
