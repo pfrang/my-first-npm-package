@@ -19,7 +19,9 @@ jobs:
         with:
           node-version: 18.x
           cache: "pnpm"
+          cache-dependency-path: package/pnpm-lock.yaml
 
-      - run: cd package
       - run: pnpm install --frozen-lockfile
+        working-directory: package
       - run: pnpm run ci
+        working-directory: package
