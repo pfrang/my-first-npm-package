@@ -4,7 +4,7 @@
   "description": "Welcome to my first npm package!",
   "main": "index.js",
   "scripts": {
-    "release": "cd package && pnpm run lint && pnpm run test && pnpm run build && changeset publish"
+    "release": "cd package && pnpm run lint && pnpm run test && pnpm run build && cd .. && changeset publish"
   },
   "keywords": [],
   "author": "",
