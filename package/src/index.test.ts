@@ -1,4 +1,5 @@
 import { describe, it, expect } from "vitest"
+import { printInput } from "./functions"
 
 describe('hello', () => {
   it('should pass', () => {
@@ -9,5 +10,13 @@ describe('hello', () => {
 describe('hello', () => {
   it('should pass', () => {
     expect(2).toBe(2)
+  })
+})
+
+describe('printInput', () => {
+  it('should print input', () => {
+    const input = 'Hei turid'
+    const result = printInput(input)
+    expect(result).toEqual(input)
   })
 })
