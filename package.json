@@ -1,0 +1,12 @@
+{
+  "name": "my-first-npm-package",
+  "version": "1.0.0",
+  "description": "Welcome to my first npm package!",
+  "main": "index.js",
+  "scripts": {
+    "release": "cd release && pnpm run lint && pnpm run test && pnpm run build && changeset publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
