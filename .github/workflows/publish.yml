@@ -18,10 +18,8 @@ jobs:
         with:
           node-version: 18.x
           cache: "pnpm"
-          cache-dependency-path: package/pnpm-lock.yaml
 
       - run: pnpm install --frozen-lockfile
-        working-directory: package
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1

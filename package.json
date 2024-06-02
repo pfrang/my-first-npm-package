@@ -1,18 +1,26 @@
 {
-  "name": "my-first-npm-package",
-  "version": "1.0.0",
-  "description": "Welcome to my first npm package!",
-  "main": "index.js",
+  "name": "@pjaff/my-first-npm-package",
+  "version": "0.0.1",
+  "description": "My first package yo",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "private": false,
   "scripts": {
-    "release": "cd package && pnpm run lint && pnpm run test && pnpm run build && cd .. && changeset publish"
+    "dev": "vitest",
+    "test": "vitest run",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "tsc",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "pnpm run lint && pnpm run test && pnpm run build && changeset publish"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "@changesets/cli": "^2.27.5"
-  },
-  "workspaces": {
-    "packages": ["package", "playground"]
+    "@changesets/cli": "^2.27.5",
+    "@types/node": "^20.13.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
   }
 }
