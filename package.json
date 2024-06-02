@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.27.5"
+  },
+  "workspaces": {
+    "packages": ["package", "playground"]
   }
 }
