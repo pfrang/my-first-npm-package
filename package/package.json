@@ -1,7 +1,7 @@
 {
   "name": "@pjaff/my-first-npm-package",
   "version": "0.0.1",
-  "description": "",
+  "description": "My first package yo",
   "main": "./dist/index.js",
   "scripts": {
     "dev": "vitest",
